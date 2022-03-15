@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Col, Container, Row } from 'reactstrap';
 import RecipeCreate from './RecipeCreate';
 import RecipeDisplay from './RecipeDisplay';
-import './Recipe.css'
+
 
 
 interface RecipeProps {

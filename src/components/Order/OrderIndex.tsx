@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Col, Container, Row } from 'reactstrap';
 import OrderCreate from './OrderCreate';
 import OrderDisplay from './OrderDisplay';
-import './Order.css'
+
 
 interface OrderIndexProps {
     token: string

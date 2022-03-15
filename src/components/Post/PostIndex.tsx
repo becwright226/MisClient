@@ -8,7 +8,7 @@ import {
 } from 'reactstrap';
 import PostDisplay from './PostCard/PostDisplay'
 import PostCreate from './PostCreate';
-import './Post.css'
+
 
 
 

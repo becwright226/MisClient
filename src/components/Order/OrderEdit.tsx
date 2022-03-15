@@ -30,7 +30,7 @@ interface OrderEditState {
     model: boolean
 }
  
-class PostEdit extends Component<OrderEditProps, OrderEditState> {
+class OrderEdit extends Component<OrderEditProps, OrderEditState> {
 
     constructor(props: OrderEditProps) {
         super(props);
@@ -124,4 +124,4 @@ class PostEdit extends Component<OrderEditProps, OrderEditState> {
     }
 }
  
-export default PostEdit;
+export default OrderEdit;

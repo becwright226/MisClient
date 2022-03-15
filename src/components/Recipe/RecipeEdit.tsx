@@ -84,7 +84,7 @@ class RecipeEdit extends React.Component<RecipeEditProps, RecipeEditState> {
                     <Form onSubmit={this.recipeUpdate}>
                         <FormGroup>
                             <Label for="cuisine">Cuisine</Label>
-                            <Input id="cuisine" type="text" name="cuisine" defaultValue={this.props.recipe.cuisine} onChange={(e:any) => this.setState({cuisine: e.target.value})} />
+                            <Input id="cuisine" type="text" name="cuisine" onChange={(e:any) => this.setState({cuisine: e.target.value})} defaultValue={this.props.recipe.cuisine}/>
                         </FormGroup>
                         <FormGroup>
                             <Label for="title">Title</Label>
@@ -100,11 +100,11 @@ class RecipeEdit extends React.Component<RecipeEditProps, RecipeEditState> {
                         </FormGroup>
                         <FormGroup>
                         <Label for="time">Time</Label>
-                        <Input id="li_time" type='number' name="time"  onChange={(e:any) => this.setState({time: e.target.value})} defaultValue={this.props.recipe.desc}/> 
+                        <Input id="li_time" type='number' name="time"  onChange={(e:any) => this.setState({time: e.target.value})} defaultValue={this.props.recipe.time}/> 
                         </FormGroup>
                         <FormGroup>
                         <Label for="method">Method</Label>
-                        <Input id="li_method" type='text' name="role"  onChange={(e:any) => this.setState({desc: e.target.value})} defaultValue={this.props.recipe.method}/> 
+                        <Input id="li_method" type='text' name="role"  onChange={(e:any) => this.setState({method: e.target.value})} defaultValue={this.props.recipe.method}/> 
                         </FormGroup>
                         <Button type="submit" color="primary"> Submit </Button>
                     </Form>

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Col, Container, Row } from 'reactstrap';
 import DiaryCreate from './DiaryCreate';
 import DiaryDisplay from './DiaryDisplay';
-import './Diary.css'
+
 
 
 interface DiaryProps {

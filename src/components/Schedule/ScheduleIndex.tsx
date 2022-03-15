@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Col, Container, Row } from 'reactstrap';
 import SchedDisplay from './ScheduleCard/SchedDisplay';
 import SchedCreate from './ScheduleCreate';
-import './Schedule.css'
+
 
 interface SchedIndexProps {
     token: string
