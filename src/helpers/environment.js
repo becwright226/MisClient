@@ -7,9 +7,9 @@ switch (window.location.hostname) {
     APIURL = 'http://localhost:2260';
     break;
 
-    case "misenplas-gpir.herokuapp.com":
+    case "misenplas.herokuapp.com":
 
-    APIURL= 'https://misenplas-gpir.herokuapp.com'
+    APIURL= 'https://misenplas.herokuapp.com'
 
 }
 
