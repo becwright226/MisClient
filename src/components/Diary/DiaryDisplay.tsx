@@ -9,6 +9,7 @@ import {
   CardFooter,
   CardSubtitle,
 } from "reactstrap";
+import APIURL from "../../helpers/environment";
 import DiaryDelete from "./DiaryDelete";
 import DiaryEdit from "./DiaryEdit";
 
@@ -35,7 +36,7 @@ class DiaryDisplay extends Component<DiaryDisplayProps, DiaryDisplayState> {
 
   fetchDiaries = async () => {
     try {
-      const res = await fetch("http://localhost:2206/diary/mydiaries", {
+      const res = await fetch(`${APIURL}/diary/mydiaries`, {
         method: "GET",
         headers: new Headers({
           "Content-Type": "application/json",

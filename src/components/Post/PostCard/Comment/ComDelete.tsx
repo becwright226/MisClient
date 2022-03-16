@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Button } from 'reactstrap';
+import APIURL from '../../../../helpers/environment'
 
 interface ComDeleteProps {
     token: string
@@ -33,7 +34,7 @@ class ComDelete extends Component<ComDeleteProps, ComDeleteState> {
     }
 
     commentDelete = (e:any) => {
-        fetch(`http://localhost:2206/comment/${this.props.comment.id}`, {
+        fetch(`${APIURL}/comment/${this.props.comment.id}`, {
           method: 'DELETE',
           body: JSON.stringify({    
             date: this.state.date,

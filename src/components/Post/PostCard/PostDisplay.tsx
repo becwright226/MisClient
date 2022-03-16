@@ -13,6 +13,7 @@ import {
 import ComIndex from "./Comment/ComIndex";
 import PostDelete from "./PostDelete";
 import PostEdit from "./PostEdit";
+import APIURL from '../../../helpers/environment'
 
 interface PostDisplayProps {
   token: string;
@@ -38,7 +39,7 @@ class PostDisplay extends Component<PostDisplayProps, PostDisplayState> {
 
   fetchPosts = async () => {
     try {
-      const res = await fetch("http://localhost:2206/post/allposts", {
+      const res = await fetch(`${APIURL}/post/allposts`, {
         method: "GET",
         headers: new Headers({
           "Content-Type": "application/json",

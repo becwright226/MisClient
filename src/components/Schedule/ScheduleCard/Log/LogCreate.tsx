@@ -9,6 +9,7 @@ import {
     ModalBody,
     ModalHeader
 } from 'reactstrap';
+import APIURL from '../../../../helpers/environment'
 
 
 interface LogCreateProps {
@@ -54,7 +55,7 @@ class LogCreate extends Component<LogCreateProps, LogCreateState> {
             time: this.state.time,
         } 
         try {
-            const res = await fetch(`http://localhost:2206/log/${this.props.schedule.id}`, {
+            const res = await fetch(`${APIURL}/log/${this.props.schedule.id}`, {
                 method: 'POST',
                 body: JSON.stringify(requestObject),
                 headers: new Headers({

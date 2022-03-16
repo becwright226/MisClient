@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Modal, ModalHeader, ModalBody, Form, FormGroup, Label, Input, Button } from 'reactstrap';
-
+import APIURL from '../../../helpers/environment'
 
 interface PostEditProps {
    token: string
@@ -46,7 +46,7 @@ class PostEdit extends Component<PostEditProps, PostEditState> {
         event.preventDefault()
         console.log(this.props.post.id)
         console.log(this.props.post)
-        fetch(`http://localhost:2206/post/${this.props.post.id}`, {
+        fetch(`${APIURL}/post/${this.props.post.id}`, {
           method: 'PUT',
           body: JSON.stringify({ 
             date: this.state.date,

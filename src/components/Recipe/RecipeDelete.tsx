@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Button } from 'reactstrap';
+import APIURL from '../../helpers/environment'
 
 interface RecipeDeleteProps {
     token: string
@@ -43,7 +44,7 @@ class RecipeDelete extends Component<RecipeDeleteProps, RecipeDeleteState> {
     }
 
     recipeDelete = (e:any) => {
-        fetch(`http://localhost:2206/recipe/${this.props.recipe.id}`, {
+        fetch(`${APIURL}/recipe/${this.props.recipe.id}`, {
           method: 'DELETE',
           body: JSON.stringify({    
             cuisine: this.state.cuisine,

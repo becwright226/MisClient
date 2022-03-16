@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Button } from 'reactstrap';
+import APIURL from '../../../../helpers/environment'
 
 interface LogDeleteProps {
     token: string
@@ -37,7 +38,7 @@ class LogDelete extends Component<LogDeleteProps, LogDeleteState> {
     }
 
     logDelete = (e:any) => {
-        fetch(`http://localhost:2206/log/${this.props.log.id}`, {
+        fetch(`${APIURL}/log/${this.props.log.id}`, {
           method: 'DELETE',
           body: JSON.stringify({    
             date:this.state.date,

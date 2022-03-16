@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Form, FormGroup, Label, Input, Button, ModalHeader, ModalBody, Modal } from 'reactstrap';
-
+import APIURL from '../../../../helpers/environment'
 
 interface ComCreateProps {
     token: string
@@ -42,7 +42,7 @@ class ComCreate extends Component<ComCreateProps, ComCreateState> {
             content: this.state.content
         } 
         try {
-            const res = await fetch(`http://localhost:2206/comment/${this.props.post.id}`, {
+            const res = await fetch(`${APIURL}/comment/${this.props.post.id}`, {
                 method: 'POST',
                 body: JSON.stringify(requestObject),
                 headers: new Headers({

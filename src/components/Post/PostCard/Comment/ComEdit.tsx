@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Modal, ModalHeader, ModalBody, Form, FormGroup, Label, Input, Button } from 'reactstrap';
-
+import APIURL from '../../../../helpers/environment'
 
 interface ComEditProps {
    token: string
@@ -40,7 +40,7 @@ class ComEdit extends React.Component<ComEditProps, ComEditState> {
         event.preventDefault()
         console.log(this.props.comment.id)
         console.log(this.props.comment)
-        fetch(`http://localhost:2206/comment/${this.props.comment.id}`, {
+        fetch(`${APIURL}/comment/${this.props.comment.id}`, {
           method: 'PUT',
           body: JSON.stringify({ 
             date: this.state.date,

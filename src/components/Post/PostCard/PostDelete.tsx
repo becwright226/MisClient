@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Button } from 'reactstrap';
+import APIURL from '../../../helpers/environment'
 
 interface PostDeleteProps {
     token: string
@@ -38,7 +39,7 @@ class PostDelete extends Component<PostDeleteProps, PostDeleteState> {
     }
 
     postDelete = (e:any) => {
-        fetch(`http://localhost:2206/post/${this.props.post.id}`, {
+        fetch(`${APIURL}/post/${this.props.post.id}`, {
           method: 'DELETE',
           body: JSON.stringify({    
             date: this.state.date,

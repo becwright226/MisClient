@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Button, Container, Form, FormGroup, Input, Label } from 'reactstrap';
+import APIURL from '../../helpers/environment'
 
 interface SchedCreateProps {
     token: string  
@@ -36,7 +37,7 @@ interface SchedCreateProps {
                     empAssign: this.state.empAssign
                   } 
                   try {
-                      const res = await fetch('http://localhost:2206/schedule/', {
+                      const res = await fetch(`${APIURL}/schedule/`, {
                       method: 'POST',
                       body: JSON.stringify(requestObject),
                       headers: new Headers({

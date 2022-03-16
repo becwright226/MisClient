@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Form, FormGroup, Label, Input, Button } from 'reactstrap';
+import APIURL from '../../helpers/environment'
 
 interface OrderCreateProps {
    token: string 
@@ -39,7 +40,7 @@ class OrderCreate extends Component<OrderCreateProps, OrderCreateState> {
             cost: this.state.cost
         }
         try {
-            const res = await fetch('http://localhost:2206/order/', {
+            const res = await fetch(`${APIURL}/order/`, {
                 method: 'POST',
                 body: JSON.stringify(requestObject),
                 headers: new Headers({

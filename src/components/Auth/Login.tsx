@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 import "./Auth.css";
+import APIURL from '../../helpers/environment'
 
 
 interface LoginProps {
@@ -36,7 +37,7 @@ class Login extends Component<LoginProps, LoginState> {
       role: this.state.role,
     };
     try {
-    const res = await fetch("http://localhost:2206/user/login", {
+    const res = await fetch(`${APIURL}/user/login`, {
       method: "POST",
       body: JSON.stringify(requestObject),
       headers: new Headers({

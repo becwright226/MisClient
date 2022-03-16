@@ -6,6 +6,7 @@ import {
     Input,
     Label
 } from 'reactstrap';
+import APIURL from '../../helpers/environment'
 
 
 interface PostCreateProps {
@@ -43,7 +44,7 @@ class Post extends Component<PostCreateProps, PostCreateState> {
             role: this.state.role,
         } 
         try {
-            const res = await fetch('http://localhost:2206/post/', {
+            const res = await fetch(`${APIURL}/post/`, {
                 method: 'POST',
             body: JSON.stringify(requestObject),
             headers: new Headers({

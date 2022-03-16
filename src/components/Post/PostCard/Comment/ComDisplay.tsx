@@ -13,6 +13,7 @@ import {
 
 import ComEdit from "./ComEdit";
 import ComDelete from "./ComDelete";
+import APIURL from '../../../../helpers/environment'
 
 
 interface ComDisplayProps {
@@ -48,7 +49,7 @@ class ComDisplay extends Component<ComDisplayProps, ComDisplayState> {
 
   fetchComments = async () => {
     try {
-      const res = await fetch(`http://localhost:2206/comment/${this.props.post.id}`, {
+      const res = await fetch(`${APIURL}/comment/${this.props.post.id}`, {
         method: "GET",
         headers: new Headers({
           "Content-Type": "application/json",

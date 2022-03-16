@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Modal, ModalHeader, ModalBody, Form, FormGroup, Label, Input, Button } from 'reactstrap';
-
+import APIURL from '../../../../helpers/environment'
 
 interface LogEditProps {
    token: string
@@ -44,7 +44,7 @@ class LogEdit extends Component<LogEditProps, LogEditState> {
         event.preventDefault()
         console.log(this.props.log.id)
         console.log(this.props.log)
-        fetch(`http://localhost:2206/log/${this.props.log.id}`, {
+        fetch(`${APIURL}/log/${this.props.log.id}`, {
           method: 'PUT',
           body: JSON.stringify({ 
             date: this.state.date,

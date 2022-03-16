@@ -12,6 +12,7 @@ import {
 } from "reactstrap";
 import RecipeDelete from "./RecipeDelete";
 import RecipeEdit from "./RecipeEdit";
+import APIURL from '../../helpers/environment'
 
 
 interface RecipeDisplayProps {
@@ -37,7 +38,7 @@ class RecipeDisplay extends Component<RecipeDisplayProps, RecipeDisplayState> {
 
   fetchRecipes = async () => {
     try {
-      const res = await fetch("http://localhost:2206/recipe/allrecipes", {
+      const res = await fetch(`${APIURL}/recipe/allrecipes`, {
         method: "GET",
         headers: new Headers({
           "Content-Type": "application/json",

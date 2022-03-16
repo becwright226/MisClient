@@ -8,6 +8,7 @@ import {
 } from "reactstrap";
 import OrderDelete from "./OrderDelete";
 import OrderEdit from "./OrderEdit";
+import APIURL from '../../helpers/environment'
 
 interface OrderDisplayProps {
   token: string;
@@ -32,7 +33,7 @@ class OrderDisplay extends Component<OrderDisplayProps, OrderDisplayState> {
 
   fetchOrders = async () => {
     try {
-      const res = await fetch("http://localhost:2206/order/orders", {
+      const res = await fetch(`${APIURL}/order/orders`, {
         method: "GET",
         headers: new Headers({
           "Content-Type": "application/json",

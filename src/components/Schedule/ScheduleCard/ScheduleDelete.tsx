@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Button } from 'reactstrap';
+import APIURL from '../../../helpers/environment'
 
 interface ScheduleDeleteProps {
     token: string
@@ -37,7 +38,7 @@ class ScheduleDelete extends Component<ScheduleDeleteProps, ScheduleDeleteState>
     }
 
     scheduleDelete = (e:any) => {
-        fetch(`http://localhost:2206/schedule/${this.props.schedule.id}`, {
+        fetch(`${APIURL}/schedule/${this.props.schedule.id}`, {
           method: 'DELETE',
           body: JSON.stringify({    
             date:this.state.date,

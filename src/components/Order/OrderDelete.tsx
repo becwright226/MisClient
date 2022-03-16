@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Button } from 'reactstrap';
+import APIURL from '../../helpers/environment'
 
 interface OrderDeleteProps {
     token: string
@@ -44,7 +45,7 @@ class OrderDelete extends Component<OrderDeleteProps, OrderDeleteState> {
     }
 
     orderDelete = (e:any) => {
-        fetch(`http://localhost:2206/order/${this.props.order.id}`, {
+        fetch(`${APIURL}/order/${this.props.order.id}`, {
           method: 'DELETE',
           body: JSON.stringify({    
             date: this.state.date,

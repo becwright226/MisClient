@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Modal, ModalHeader, ModalBody, Form, FormGroup, Label, Input, Button } from 'reactstrap';
-
+import APIURL from '../../helpers/environment'
 
 interface DiaryEditProps {
    token: string
@@ -43,7 +43,7 @@ class DiaryEdit extends React.Component<DiaryEditProps, DiaryEditState> {
         event.preventDefault()
         console.log(this.props.diary.id)
         console.log(this.props.diary)
-        fetch(`http://localhost:2206/diary/${this.props.diary.id}`, {
+        fetch(`${APIURL}/diary/${this.props.diary.id}`, {
           method: 'PUT',
           body: JSON.stringify({ 
             date: this.state.date,

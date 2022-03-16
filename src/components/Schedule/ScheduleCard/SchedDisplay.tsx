@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-
+import APIURL from '../../../helpers/environment'
 import {
     Card,
     CardBody,
@@ -40,7 +40,7 @@ interface SchedDisplayProps {
   
     fetchScheds = async () => {
       try {
-        const res = await fetch("http://localhost:2206/schedule/schedules", {
+        const res = await fetch(`${APIURL}/schedule/schedules`, {
           method: "GET",
           headers: new Headers({
             "Content-Type": "application/json",

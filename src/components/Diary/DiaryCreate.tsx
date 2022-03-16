@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Button, Form, FormGroup, Input, Label } from 'reactstrap';
-
+import APIURL from '../../helpers/environment'
 
 interface DiaryCreateProps {
     token: string
@@ -31,7 +31,7 @@ class DiaryCreate extends Component<DiaryCreateProps, DiaryCreateState> {
            content: this.state.content,
        } 
        try {
-           const res = await fetch('http://localhost:2206/diary/', {
+           const res = await fetch(`${APIURL}/diary/`, {
                method: 'POST',
                body: JSON.stringify(requestObject),
                headers: new Headers({

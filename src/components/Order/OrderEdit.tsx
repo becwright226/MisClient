@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Modal, ModalHeader, ModalBody, Form, FormGroup, Label, Input, Button } from 'reactstrap';
-
+import APIURL from '../../helpers/environment'
 
 interface OrderEditProps {
    token: string
@@ -51,7 +51,7 @@ class OrderEdit extends Component<OrderEditProps, OrderEditState> {
         event.preventDefault()
         console.log(this.props.order.id)
         console.log(this.props.order)
-        fetch(`http://localhost:2206/order/${this.props.order.id}`, {
+        fetch(`${APIURL}/order/${this.props.order.id}`, {
           method: 'PUT',
           body: JSON.stringify({ 
             date: this.state.date,

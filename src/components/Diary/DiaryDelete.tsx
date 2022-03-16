@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Button } from 'reactstrap';
+import APIURL from '../../helpers/environment'
 
 interface DiaryDeleteProps {
     token: string
@@ -34,7 +35,7 @@ class DiaryDelete extends Component<DiaryDeleteProps, DiaryDeleteState> {
     }
 
     diaryDelete = (e:any) => {
-        fetch(`http://localhost:2206/diary/${this.props.diary.id}`, {
+        fetch(`${APIURL}/diary/${this.props.diary.id}`, {
           method: 'DELETE',
           body: JSON.stringify({    
             date: this.state.date,

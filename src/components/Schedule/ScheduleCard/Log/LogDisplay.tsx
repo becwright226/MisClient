@@ -10,7 +10,7 @@ import {
   
   CardHeader,
 } from "reactstrap";
-
+import APIURL from '../../../../helpers/environment'
 import LogEdit from "./LogEdit";
 import LogDelete from "./LogDelete";
 
@@ -49,7 +49,7 @@ class LogDisplay extends Component<LogDisplayProps, LogDisplayState> {
 
   fetchLogs = async () => {
     try {
-      const res = await fetch(`http://localhost:2206/log/${this.props.schedule.id}`, {
+      const res = await fetch(`${APIURL}/log/${this.props.schedule.id}`, {
         method: "GET",
         headers: new Headers({
           "Content-Type": "application/json",

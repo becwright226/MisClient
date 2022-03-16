@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Button, Form, FormGroup, Input, Label, Modal, ModalBody, ModalHeader } from 'reactstrap';
+import APIURL from '../../../helpers/environment'
 
 interface SchedEditProps {
    token: string
@@ -41,7 +42,7 @@ class ScheduleEdit extends React.Component<SchedEditProps, SchedEditState> {
         e.preventDefault()
         console.log(this.props.schedule.id)
         console.log(this.props.schedule)
-        fetch(`http://localhost:2206/schedule/${this.props.schedule.id}`, {
+        fetch(`${APIURL}/schedule/${this.props.schedule.id}`, {
             method: 'PUT',
             body: JSON.stringify({
                 date:this.state.date,

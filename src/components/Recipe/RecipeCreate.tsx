@@ -6,6 +6,7 @@ import {
     Input,
     Label
 } from 'reactstrap';
+import APIURL from '../../helpers/environment'
 
 interface RecipeCreateProps {
     token: string
@@ -47,7 +48,7 @@ class RecipeCreate extends React.Component<RecipeCreateProps, RecipeCreateState>
            method: this.state.method
        } 
        try {
-           const res = await fetch('http://localhost:2206/recipe/', {
+           const res = await fetch(`${APIURL}/recipe/`, {
                method: 'POST',
                body: JSON.stringify(requestObject),
                headers: new Headers({
