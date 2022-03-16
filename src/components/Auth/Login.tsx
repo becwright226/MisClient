@@ -72,7 +72,7 @@ class Login extends Component<LoginProps, LoginState> {
               <Label for="email">Email</Label>
               <Input
                 style={{ backgroundColor: "burlywood", width: "75%", marginLeft: '13%' }}
-                className="input text-center"
+                className=" text-center"
                 type="email"
                 name="email"
                 placeholder="enter email"
@@ -85,7 +85,7 @@ class Login extends Component<LoginProps, LoginState> {
               <Label className="password">Password</Label>
               <Input
                 style={{ backgroundColor: "burlywood", width: "75%", marginLeft: '13%' }}
-                className="input text-center"
+                className=" text-center"
                 type="password"
                 name="password"
                 placeholder="enter password"
@@ -100,7 +100,7 @@ class Login extends Component<LoginProps, LoginState> {
               <Label for="role">Role</Label>
               <Input
                 style={{ backgroundColor: "burlywood", width: "75%", marginLeft: '13%' }}
-                className="input text-center"
+                className="text-center"
                 type="select"
                 name="role"
                 onChange={(e: any) => this.setState({ role: e.target.value })}
