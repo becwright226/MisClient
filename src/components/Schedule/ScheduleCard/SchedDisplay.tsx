@@ -8,7 +8,6 @@ import {
     Col,
     CardTitle,
     CardFooter,
-    Button,
     CardText,
     CardSubtitle,
   } from "reactstrap";
@@ -68,7 +67,7 @@ interface SchedDisplayProps {
       prevProps: SchedDisplayProps,
       prevState: SchedDisplayState
     ) {
-      if (this.props.trigger != prevProps.trigger) {
+      if (this.props.trigger !== prevProps.trigger) {
         this.fetchScheds();
       }
     }

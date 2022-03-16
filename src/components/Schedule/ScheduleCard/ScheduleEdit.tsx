@@ -25,7 +25,7 @@ interface SchedEditState {
     model: boolean
 }
  
-class ScheduleEdit extends React.Component<SchedEditProps, SchedEditState> {
+class ScheduleEdit extends Component<SchedEditProps, SchedEditState> {
     constructor(props: SchedEditProps) {
         super(props);
         this.state = {

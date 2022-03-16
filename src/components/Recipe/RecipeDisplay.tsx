@@ -65,7 +65,7 @@ class RecipeDisplay extends Component<RecipeDisplayProps, RecipeDisplayState> {
     prevProps: RecipeDisplayProps,
     prevState: RecipeDisplayState
   ) {
-    if (this.props.trigger != prevProps.trigger) {
+    if (this.props.trigger !== prevProps.trigger) {
       this.fetchRecipes();
     }
   }

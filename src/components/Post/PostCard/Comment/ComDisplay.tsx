@@ -77,7 +77,7 @@ class ComDisplay extends Component<ComDisplayProps, ComDisplayState> {
     prevProps: ComDisplayProps,
     prevState: ComDisplayState
   ) {
-    if (this.props.trigger != prevProps.trigger) {
+    if (this.props.trigger !== prevProps.trigger) {
       this.fetchComments();
     }
   }

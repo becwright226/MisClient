@@ -23,7 +23,7 @@ interface RecipeCreateState {
     method?: string
 }
  
-class RecipeCreate extends React.Component<RecipeCreateProps, RecipeCreateState> {
+class RecipeCreate extends Component<RecipeCreateProps, RecipeCreateState> {
     constructor(props: RecipeCreateProps) {
         super(props);
         this.state = { 

@@ -64,6 +64,7 @@ class LogCreate extends Component<LogCreateProps, LogCreateState> {
               })
             })
             const data = await res.json()
+            console.log(data)
             this.props.triggerMethod()
             this.setState ({ 
                 date: '', 

@@ -29,7 +29,7 @@ interface RecipeEditState {
     model: boolean
 }
  
-class RecipeEdit extends React.Component<RecipeEditProps, RecipeEditState> {
+class RecipeEdit extends Component<RecipeEditProps, RecipeEditState> {
     constructor(props: RecipeEditProps) {
         super(props);
         this.state = {

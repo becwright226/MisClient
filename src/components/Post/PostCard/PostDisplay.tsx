@@ -7,7 +7,6 @@ import {
   Col,
   CardTitle,
   CardFooter,
-  Button,
   CardSubtitle,
 } from "reactstrap";
 import ComIndex from "./Comment/ComIndex";
@@ -64,7 +63,7 @@ class PostDisplay extends Component<PostDisplayProps, PostDisplayState> {
   };
 
   componentDidUpdate(prevProps: PostDisplayProps, prevState: PostDisplayState) {
-    if (this.props.trigger != prevProps.trigger) {
+    if (this.props.trigger !== prevProps.trigger) {
       this.fetchPosts();
     }
   }
@@ -88,7 +87,7 @@ class PostDisplay extends Component<PostDisplayProps, PostDisplayState> {
             }}
             key={index}
           >
-            {/* <th scope='row'>{post.id}</th> */}
+           
             <CardTitle
               className="postcard-title p-2"
               scope="row"

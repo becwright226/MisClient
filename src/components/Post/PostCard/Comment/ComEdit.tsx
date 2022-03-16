@@ -23,7 +23,7 @@ interface ComEditState {
  model: boolean
 }
  
-class ComEdit extends React.Component<ComEditProps, ComEditState> {
+class ComEdit extends Component<ComEditProps, ComEditState> {
 
     constructor(props: ComEditProps) {
         super(props);

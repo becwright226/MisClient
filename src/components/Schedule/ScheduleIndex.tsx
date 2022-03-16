@@ -13,7 +13,7 @@ interface SchedIndexState {
     trigger: boolean 
 }
  
-class SchedIndex extends React.Component<SchedIndexProps, SchedIndexState> {
+class SchedIndex extends Component<SchedIndexProps, SchedIndexState> {
     constructor(props: SchedIndexProps) {
         super(props);
         this.state = { 

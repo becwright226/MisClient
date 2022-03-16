@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Component } from "react";
+import React, { Component } from "react";
 import {
   Card,
   CardBody,
@@ -77,7 +77,7 @@ class LogDisplay extends Component<LogDisplayProps, LogDisplayState> {
     prevProps: LogDisplayProps,
     prevState: LogDisplayState
   ) {
-    if (this.props.trigger != prevProps.trigger) {
+    if (this.props.trigger !== prevProps.trigger) {
       this.fetchLogs();
     }
   }

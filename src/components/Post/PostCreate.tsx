@@ -53,6 +53,7 @@ class Post extends Component<PostCreateProps, PostCreateState> {
               })
             })
             const data = await res.json()
+            console.log(data)
             this.props.triggerMethod()
             this.setState({
                 date: '', 
