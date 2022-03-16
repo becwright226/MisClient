@@ -69,6 +69,8 @@ class RecipeCreate extends Component<RecipeCreateProps, RecipeCreateState> {
             this.props.triggerMethod()
            }
 
+           
+
       
           this.setState({
             cuisine: '',
