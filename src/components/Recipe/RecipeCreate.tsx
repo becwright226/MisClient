@@ -58,8 +58,18 @@ class RecipeCreate extends Component<RecipeCreateProps, RecipeCreateState> {
            })
            const data = await res.json()
            console.log(data)
-          this.props.triggerMethod()
 
+           if (res.status===503) {
+               alert('You must have Admin authority to post, update, or delete recipes')
+           } else if (res.status===500) {
+               alert('Internal error, please try again')
+           } else if (res.status===444) {
+               alert('Issue processing request, you must have Admin authority to post, update or delete recipes')
+           } else {
+            this.props.triggerMethod()
+           }
+
+      
           this.setState({
             cuisine: '',
             title: '',
