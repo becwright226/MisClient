@@ -88,7 +88,7 @@ class ComDisplay extends Component<ComDisplayProps, ComDisplayState> {
 
   render() {
     const commentMapper = () => {
-      return this.state.comments.map((comment: any, index: any) => {
+      return this.state.comments.length>0? this.state.comments.map((comment: any, index: any) => {
         return (
 
 <div className="wrapper text-center mx-auto" style={{display:'flex', alignItems: 'center', justifyContent: 'center'}}>
@@ -158,7 +158,7 @@ fillOpacity: "100%"}}
 
            
         );
-      });
+      }): <h2> No comments recorded </h2>
     };
     return (
       <>

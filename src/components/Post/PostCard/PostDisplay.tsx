@@ -75,7 +75,7 @@ class PostDisplay extends Component<PostDisplayProps, PostDisplayState> {
 
   render() {
     const postMapper = () => {
-      return this.state.posts.map((post: any, index: any) => {
+      return this.state.posts.length>0? this.state.posts.map((post: any, index: any) => {
         return (
           <Card
             className="postcard m-5"
@@ -136,7 +136,7 @@ class PostDisplay extends Component<PostDisplayProps, PostDisplayState> {
                 </Col>
           </Card>
         );
-      });
+      }): <h2>No posts to display</h2>
     };
     return (
       <>

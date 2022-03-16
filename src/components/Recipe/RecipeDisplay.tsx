@@ -75,7 +75,7 @@ class RecipeDisplay extends Component<RecipeDisplayProps, RecipeDisplayState> {
 
   render() {
     const recipeMapper = () => {
-      return this.state.recipes.map((recipe: any, index: any) => {
+      return this.state.recipes.length>0? this.state.recipes.map((recipe: any, index: any) => {
         return (
           <Card
             className="recicard m-5"
@@ -142,7 +142,7 @@ class RecipeDisplay extends Component<RecipeDisplayProps, RecipeDisplayState> {
             </CardFooter>
           </Card>
         );
-      });
+      }): <h2>No recipes have benn recorded</h2>
     };
     return (
       <>

@@ -88,17 +88,11 @@ class LogDisplay extends Component<LogDisplayProps, LogDisplayState> {
 
   render() {
     const logMapper = () => {
-      return this.state.logs.map((log: any, index: any) => {
+      return this.state.logs.length>0? this.state.logs.map((log: any, index: any) => {
         return (
-
 <div className="wrapper text-center mx-auto" style={{display:'flex', alignItems: 'center', justifyContent: 'center'}}>
-
-
         <Card
     className="m-1"
-  
-    
-    
     style={{
       backgroundColor: "rgb(99, 128, 99)",
       color: "black",
@@ -129,8 +123,6 @@ class LogDisplay extends Component<LogDisplayProps, LogDisplayState> {
              />
   </div>
   <div style={{float:'right'}}  >
-    
-   
     <LogDelete
                token={this.props.token}
                fetchLogs={this.fetchLogs}
@@ -138,21 +130,11 @@ class LogDisplay extends Component<LogDisplayProps, LogDisplayState> {
              />
   </div> 
     </Col>
-  
     </CardFooter>
-  
 </Card>
-
-
-
-</div>
-
-
-
-
-           
+</div>        
         );
-      });
+      }): 'this is empty'
     };
     return (
       <>

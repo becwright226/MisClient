@@ -70,7 +70,7 @@ class OrderDisplay extends Component<OrderDisplayProps, OrderDisplayState> {
 
   render() {
     const orderMapper = () => {
-      return this.state.orders.map((order: any, index: any) => {
+      return this.state.orders.length>0? this.state.orders.map((order: any, index: any) => {
         return (
           <Table
             striped
@@ -127,7 +127,7 @@ class OrderDisplay extends Component<OrderDisplayProps, OrderDisplayState> {
             </tfoot>
           </Table>
         );
-      });
+      }): <h2>No orders have been recorded</h2>
     };
     return (
       <>

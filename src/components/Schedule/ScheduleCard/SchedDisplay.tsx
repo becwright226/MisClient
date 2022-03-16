@@ -78,7 +78,7 @@ interface SchedDisplayProps {
   
     render() {
       const schedMapper = () => {
-        return this.state.schedules.map((schedule: any, index: any) => {
+        return this.state.schedules.length>0? this.state.schedules.map((schedule: any, index: any) => {
           return (
             <Card
               className="schedcard m-5"
@@ -153,7 +153,7 @@ interface SchedDisplayProps {
                  </Col>
             </Card>
           );
-        });
+        }) : <h2> No schedules have been posted </h2>
       };
       return (
         <>

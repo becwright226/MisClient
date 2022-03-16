@@ -75,7 +75,7 @@ class DiaryDisplay extends Component<DiaryDisplayProps, DiaryDisplayState> {
 
   render() {
     const diaryMapper = () => {
-      return this.state.diaries.map((diary: any, index: any) => {
+      return this.state.diaries.length>0? this.state.diaries.map((diary: any, index: any) => {
         return (
           <Card
             className="diarycard m-5"
@@ -128,7 +128,7 @@ class DiaryDisplay extends Component<DiaryDisplayProps, DiaryDisplayState> {
             </CardFooter>
           </Card>
         );
-      });
+      }): <h2>No diary entries recorded</h2>
     };
     return (
       <>
